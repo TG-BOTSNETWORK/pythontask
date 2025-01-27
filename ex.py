@@ -98,3 +98,52 @@ print(com[0])
 print(com[1])
 print(com[2])
 print(com[3])
+
+#27-01-2025
+#list ds
+i = 64
+print(type(i))
+l = []
+print(l)
+print(len(l))
+sa = l.append(10)
+print(sa)
+ds = l.append(10)
+ds1 = l.append(20)
+ds2 = l.append(30)
+ds3 = l.append(40)
+print(ds)
+print(ds1)
+print(ds2)
+print(ds3)
+print(id(l))
+
+l2 = l.copy()
+print(l2)
+l == l2
+print(l)
+print(l2)
+print(id(l)) == print(id(l2))
+
+
+l.remove(10)
+print(l)
+
+#string indexing
+s7 = 'santhu'
+print(s7)
+print(s7[0])
+print(s7[1]) 
+print(s7[2]) 
+print(s7[3])
+print(s7[4])
+print(s7[5])
+print(s7[-1])
+print(s7[-2])
+print(s7[-3])
+print(s7[-4])
+print(s7[-5])
+#slicing
+print(s7[0:5])
+print(s7[1:4])
+print(s7[-1:-4])
