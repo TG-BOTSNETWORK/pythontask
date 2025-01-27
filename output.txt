@@ -1,0 +1,84 @@
+['False', 'None', 'True', 'and', 'as', 'assert', 'async', 'await', 'break', 'class', 'continue', 'def', 'del', 'elif', 'else', 'except', 'finally', 'for', 'from', 'global', 'if', 'import', 'in', 'is', 'lambda', 'nonlocal', 'not', 'or', 'pass', 'raise', 'return', 'try', 'while', 'with', 'yield']
+35
+7
+15 23
+c is: 100
+2
+<class 'int'>
+2.5
+<class 'float'>
+300.0
+True
+False
+None
+<class 'bool'>
+1
+0
+(20+4j)
+<class 'complex'>
+20.0
+4.0
+(25+9j)
+<built-in method conjugate of complex object at 0x000001858A3AD0B0>
+(15-1j)
+(80+120j)
+(10+2.5j)
+(2+34j)
+genrative ai & llm model great career ahead. also it is research domain
+genrative ai & llm model great career ahead. also it is research domain
+genrative ai & llm model great career ahead. also it is research domain
+genrative ai & llm model great career ahead. also it is research domain
+2
+1
+10
+10.0
+1.0
+20.0
+True
+True
+True
+True
+False
+2
+2.2
+True
+(10+10j)
+m
+i
+l
+k
+<class 'int'>
+[]
+0
+None
+None
+None
+None
+None
+1673058558912
+[10, 10, 20, 30, 40]
+[10, 10, 20, 30, 40]
+[10, 10, 20, 30, 40]
+1673058558912
+1673061524544
+[10, 20, 30, 40]
+santhu
+s
+a
+n
+t
+h
+u
+u
+h
+t
+n
+a
+santh
+ant
+
+[1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+[1, 5, 9]
+[1, 6]
+[1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+[40, 30, 20, 10]
