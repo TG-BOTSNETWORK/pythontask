@@ -147,3 +147,14 @@ print(s7[-5])
 print(s7[0:5])
 print(s7[1:4])
 print(s7[-1:-4])
+
+#step indexing
+
+step_indexing = [1,2,3,4,5,6,7,8,9,10]
+print(step_indexing)
+print(step_indexing[0:10:4])
+print(step_indexing[0:10:5])
+print(step_indexing[:])
+
+l.reverse()
+print(l)
