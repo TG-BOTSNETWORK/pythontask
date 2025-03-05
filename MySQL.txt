@@ -1,0 +1,152 @@
+#MySQL
+mysql> show databases;
++--------------------+
+| Database           |
++--------------------+
+| information_schema |
+| mysql              |
+| performance_schema |
+| sys                |
++--------------------+
+4 rows in set (0.11 sec)
+
+mysql> create database santhu
+    -> ^C
+mysql> create database santhu;
+Query OK, 1 row affected (0.04 sec)
+
+mysql> show databases;
++--------------------+
+| Database           |
++--------------------+
+| information_schema |
+| mysql              |
+| performance_schema |
+| santhu             |
+| sys                |
++--------------------+
+5 rows in set (0.00 sec)
+
+mysql> open database santhu
+    -> C:\Program Files (x86)^Z^C
+mysql> open database santhu;
+ERROR 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'open database santhu' at line 1
+mysql> create database nit;
+Query OK, 1 row affected (0.01 sec)
+
+mysql> show databases;
++--------------------+
+| Database           |
++--------------------+
+| information_schema |
+| mysql              |
+| nit                |
+| performance_schema |
+| santhu             |
+| sys                |
++--------------------+
+6 rows in set (0.00 sec)
+
+mysql> use nit
+Database changed
+mysql> show tables;
+Empty set (0.01 sec)
+
+mysql> create table student(
+    -> name varchar(30),
+    -> id int not null primary key,
+    -> address varchar(50),
+    -> marks int);
+Query OK, 0 rows affected (0.18 sec)
+
+mysql> use nit
+Database changed
+mysql> use nit
+Database changed
+mysql> desc student;
++---------+-------------+------+-----+---------+-------+
+| Field   | Type        | Null | Key | Default | Extra |
++---------+-------------+------+-----+---------+-------+
+| name    | varchar(30) | YES  |     | NULL    |       |
+| id      | int         | NO   | PRI | NULL    |       |
+| address | varchar(50) | YES  |     | NULL    |       |
+| marks   | int         | YES  |     | NULL    |       |
++---------+-------------+------+-----+---------+-------+
+4 rows in set (0.01 sec)
+
+mysql> insert into student(marks,id,name,address)values(78,12, 'Santhu', 'Hyd');
+Query OK, 1 row affected (0.01 sec)
+
+mysql> insert into student values('santhosh', 20, 'bng', 66);
+Query OK, 1 row affected (0.01 sec)
+
+mysql> select * from student;
++----------+----+---------+-------+
+| name     | id | address | marks |
++----------+----+---------+-------+
+| Santhu   | 12 | Hyd     |    78 |
+| santhosh | 20 | bng     |    66 |
++----------+----+---------+-------+
+2 rows in set (0.00 sec)
+
+mysql> select name id from student;
++----------+
+| id       |
++----------+
+| Santhu   |
+| santhosh |
++----------+
+2 rows in set (0.01 sec)
+mysql> select * from student;
++----------+----+---------+-------+
+| name     | id | address | marks |
++----------+----+---------+-------+
+| Santhu   | 12 | Hyd     |    78 |
+| santhosh | 20 | bng     |    66 |
++----------+----+---------+-------+
+2 rows in set (0.01 sec)
+mysql> select * from student where id =12;
++--------+----+---------+-------+
+| name   | id | address | marks |
++--------+----+---------+-------+
+| Santhu | 12 | Hyd     |    78 |
++--------+----+---------+-------+
+1 row in set (0.02 sec)
+
+mysql> update student set address='Hyd' where id=12;
+Query OK, 0 rows affected (0.02 sec)
+Rows matched: 1  Changed: 0  Warnings: 0
+mysql> update student set address='Bihari' where id=12;
+Query OK, 1 row affected (0.05 sec)
+Rows matched: 1  Changed: 1  Warnings: 0
+
+mysql> select * from student;
++----------+----+---------+-------+--------------+
+| name     | id | address | marks | Phone_Number |
++----------+----+---------+-------+--------------+
+| Santhu   | 12 | Bihari  |    78 |         NULL |
+| santhosh | 20 | bng     |    66 |         NULL |
++----------+----+---------+-------+--------------+
+2 rows in set (0.00 sec)
+
+mysql> update student set Phone_Number=7981630014;
+ERROR 1264 (22003): Out of range value for column 'Phone_Number' at row 1
+mysql> update student set Phone_Number=7981;
+Query OK, 2 rows affected (0.01 sec)
+Rows matched: 2  Changed: 2  Warnings: 0
+
+mysql> update student set Phone_Number=6300 where id=10;
+Query OK, 0 rows affected (0.00 sec)
+Rows matched: 0  Changed: 0  Warnings: 0
+
+mysql> update student set Phone_Number=6300 where id=12;
+Query OK, 1 row affected (0.00 sec)
+Rows matched: 1  Changed: 1  Warnings: 0
+mysql> select * from student;
++----------+----+---------+-------+--------------+
+| name     | id | address | marks | Phone_Number |
++----------+----+---------+-------+--------------+
+| Santhu   | 12 | Bihari  |    78 |         6300 |
+| santhosh | 20 | bng     |    66 |         7981 |
++----------+----+---------+-------+--------------+
+2 rows in set (0.00 sec)
